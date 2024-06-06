@@ -426,7 +426,7 @@ footer p {
 }
 
 #job-description {
-  background-color: #e1f2ff;
+  background-color: rgba(183, 229, 255, 0.1);
   padding: 80px 0;
 }
 #job-description .container {
@@ -457,17 +457,190 @@ footer p {
 }
 
 #qanda {
-  background-color: #e1f2ff;
-  padding: 80px 0;
+  background-color: rgba(183, 229, 255, 0.1);
+  padding: 80px 0 100px;
 }
 #qanda .container {
   margin-bottom: 0;
+}
+#qanda .sec-title {
+  margin-bottom: 80px;
 }
 #qanda .sec-title::before {
   border-left: 20px solid #0062AC;
 }
 #qanda .sec-title::after {
   border-right: 20px solid #0062AC;
+}
+#qanda .qa-items {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+#qanda .qa-items .question, #qanda .qa-items .answer {
+  position: relative;
+  cursor: pointer;
+  padding-left: 40px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+#qanda .qa-items .answer {
+  display: none;
+}
+#qanda .qa-items .question::before {
+  content: "Q";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bolder;
+  text-align: center;
+  color: #fff;
+  background-color: #0062AC;
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.35);
+}
+#qanda .qa-items .answer::before {
+  content: "A";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bolder;
+  text-align: center;
+  color: #0062AC;
+  background-color: #fff;
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.35);
+}
+#qanda .qa-items span {
+  display: block;
+}
+#qanda .qa-items span:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #0062AC;
+  top: -90px;
+  left: -100px;
+}
+#qanda .qa-items span:nth-child(2) {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  background-color: #86B81B;
+  top: -60px;
+  left: -60px;
+}
+#qanda .qa-items span:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #F3E100;
+  bottom: -50px;
+  right: -80px;
+}
+#qanda .qa-items span:nth-child(4) {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: #0062AC;
+  bottom: -10px;
+  right: -110px;
+}
+#qanda .qa-items::before,
+#qanda .qa-items::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 1px;
+  background-color: #0062AC;
+}
+#qanda .qa-items::before {
+  top: -40px;
+  left: -60px;
+}
+#qanda .qa-items::after {
+  bottom: -30px;
+  right: -40px;
+}
+
+#contact {
+  background-color: rgba(183, 229, 255, 0.1);
+  padding: 80px 0;
+}
+#contact .sec-title {
+  margin-bottom: 80px;
+}
+#contact .sec-title::before {
+  border-left: 20px solid #0062AC;
+}
+#contact .sec-title::after {
+  border-right: 20px solid #0062AC;
+}
+#contact .wrapper {
+  border: 3px solid #0062AC;
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 60px;
+}
+#contact .wrapper dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+#contact .wrapper dl dt {
+  width: 30%;
+  background-color: #0062AC;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+#contact .wrapper dl dd {
+  width: 70%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+#contact .wrapper dl dd input[type=text] {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 98, 172, 0.1);
+  border: none;
+  border-bottom: 1px solid #0062AC;
+}
+#contact .wrapper dl dd select {
+  width: 100%;
+  padding: 10px;
+}
+#contact .wrapper dl dd textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 10px;
+  background-color: rgba(0, 98, 172, 0.1);
+  border: none;
+  border-bottom: 1px solid #0062AC;
+}
+#contact .wrapper dl .way, #contact .wrapper dl .gender {
+  text-align: left;
+  padding: 10px 20px;
+}
+#contact .wrapper dl .way label, #contact .wrapper dl .gender label {
+  margin-right: 30px;
+}
+#contact .wrapper .btn {
+  background-color: #0062AC;
+  color: #fff;
+  padding: 16px 100px;
+  border: 3px solid #0062AC;
+  border-radius: 5px;
+  font-weight: bolder;
+  transition: all 0.5s;
+}
+#contact .wrapper .btn:hover {
+  background-color: #fff;
+  color: #0062AC;
 }
 
 /*  *//*# sourceMappingURL=style.css.map */
