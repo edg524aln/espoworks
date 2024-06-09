@@ -94,6 +94,7 @@ header .header-inner {
 }
 header .header-inner h1 {
   font-size: 20px;
+  z-index: 20;
 }
 header .header-inner nav ul {
   display: flex;
@@ -104,6 +105,79 @@ header .header-inner nav ul li {
 }
 header a {
   color: #fff;
+}
+header .navi {
+  opacity: 0;
+  visibility: collapse;
+  transition: all 0.5s;
+  z-index: 20;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+header .navi li {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}
+header .bars {
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  display: none;
+  transition: all 0.5s;
+}
+header .bars span {
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transition: all 0.5s;
+  transform: translateX(-50%);
+}
+header .bars span:nth-child(1) {
+  top: 30%;
+}
+header .bars span:nth-child(2) {
+  top: 49%;
+}
+header .bars span:nth-child(3) {
+  bottom: 30%;
+}
+header #mask {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #0062AC;
+  opacity: 0.8;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.open #mask {
+  display: block;
+}
+.open .bars span:nth-child(1) {
+  transform: translate(-16px, 12px) rotate(315deg);
+}
+.open .bars span:nth-child(2) {
+  opacity: 0;
+}
+.open .bars span:nth-child(3) {
+  transform: translate(-16px, -12px) rotate(-315deg);
+}
+.open .navi {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* mainvisual */
@@ -341,20 +415,6 @@ header a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 20;
-}
-
-/* footer */
-footer {
-  background-color: #0062AC;
-  color: #fff;
-  width: 100%;
-  height: 150px;
-}
-footer .container {
-  margin-bottom: 0;
-}
-footer p {
-  text-align: center;
 }
 
 #how-to .how-to-text {
@@ -643,4 +703,118 @@ footer p {
   color: #0062AC;
 }
 
+/* footer */
+footer {
+  background-color: #0062AC;
+  color: #fff;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+footer .container {
+  margin-bottom: 0;
+}
+footer .container .footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: left;
+}
+footer .container .footer-logo img {
+  width: 100px;
+  margin-right: 20px;
+}
+footer .copy {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 860px) {
+  header nav {
+    display: none;
+  }
+  header .bars {
+    display: block;
+  }
+  #mainvisual .container .main-text {
+    left: 16px;
+  }
+  #about-caddy .container {
+    margin-bottom: 0;
+  }
+  #about-caddy .container .wrapper {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  #about-caddy .container .wrapper .about-caddy-img {
+    width: 100%;
+  }
+  #about-caddy .container .wrapper .about-caddy-img .fukidashi {
+    bottom: auto;
+    left: 50%;
+    top: -370px;
+  }
+  #about-caddy .container .wrapper .about-caddy-text {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 0 16px;
+  }
+  #about-caddy .container .wrapper .about-caddy-text::before {
+    right: 0;
+  }
+  #about-caddy .container .wrapper .about-caddy-text::after {
+    height: 80px;
+    top: -40px;
+    right: 16px;
+  }
+  #flow .flows {
+    width: 100%;
+  }
+  #job-description .job-info {
+    width: 100%;
+  }
+  #qanda .qa-items::before {
+    left: 0;
+  }
+  #qanda .qa-items::after {
+    right: 60px;
+  }
+  #qanda .qa-items span:nth-child(1) {
+    width: 36px;
+    height: 36px;
+    top: -70px;
+    left: 0;
+  }
+  #qanda .qa-items span:nth-child(2) {
+    width: 24px;
+    height: 24px;
+    top: -50px;
+    left: 18px;
+  }
+  #qanda .qa-items span:nth-child(3) {
+    width: 36px;
+    height: 36px;
+    right: 24px;
+    bottom: -46px;
+  }
+  #qanda .qa-items span:nth-child(4) {
+    width: 24px;
+    height: 24px;
+    right: 0;
+  }
+  #contact .wrapper dl {
+    flex-direction: column;
+  }
+  #contact .wrapper dl dt {
+    width: 100%;
+  }
+  #contact .wrapper dl dd {
+    width: 100%;
+    padding-left: 0;
+  }
+}
 /*  *//*# sourceMappingURL=style.css.map */
