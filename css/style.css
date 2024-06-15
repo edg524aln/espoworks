@@ -754,7 +754,8 @@ footer .copy {
   }
   #about-caddy .container .wrapper .about-caddy-img .fukidashi {
     bottom: auto;
-    left: 50%;
+    left: 100%;
+    transform: translateX(-100%);
     top: -370px;
   }
   #about-caddy .container .wrapper .about-caddy-text {
@@ -774,8 +775,20 @@ footer .copy {
   #flow .flows {
     width: 100%;
   }
+  #how-to .how-to-text {
+    width: 100%;
+  }
   #job-description .job-info {
     width: 100%;
+  }
+  #job-description .job-info dt {
+    width: 100%;
+    border: none;
+  }
+  #job-description .job-info dd {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 20px;
   }
   #qanda .qa-items::before {
     left: 0;
@@ -806,15 +819,23 @@ footer .copy {
     height: 24px;
     right: 0;
   }
+  #contact .container {
+    margin-bottom: 0;
+  }
+  #contact .wrapper {
+    padding: 30px;
+  }
   #contact .wrapper dl {
     flex-direction: column;
   }
   #contact .wrapper dl dt {
     width: 100%;
+    margin-bottom: 10px;
   }
   #contact .wrapper dl dd {
     width: 100%;
     padding-left: 0;
+    margin-bottom: 30px;
   }
 }
 /*  *//*# sourceMappingURL=style.css.map */
