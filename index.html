@@ -391,10 +391,10 @@
                     <h3>ご応募・お問い合わせ</h3>
                 </div>
                 <div class="wrapper">
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSemCUIAEgy6ejxZQdaVDThINcGUJxIN_zYCKFgnBaI3o0paEw/formResponse" method="post">
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSemCUIAEgy6ejxZQdaVDThINcGUJxIN_zYCKFgnBaI3o0paEw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                         <dl>
-                            <dt><label for="name">お名前</label></dt>
-                            <dd><input type="text" id="name" name="entry.434616181"></dd>
+                            <dt><label for="name">お名前<span class="required">※</span></label></dt>
+                            <dd><input type="text" id="name" name="entry.434616181" required></dd>
                             <dt><label for="tel">お電話番号</label></dt>
                             <dd><input type="text" id="tel" name="entry.41278355"></dd>
                             <dt><label for="mail">メールアドレス</label></dt>
@@ -402,22 +402,22 @@
                             <dt>ご希望の連絡方法</dt>
                             <dd class="way">
                                 <label for="way-tel">
-                                    <input type="checkbox" id="way-tel" name="entry.528891033">電話
+                                    <input type="checkbox" id="way-tel" name="entry.528891033" value="電話">電話
                                 </label>
                                 <label for="way-mail">
-                                    <input type="checkbox" id="way-mail" name="entry.528891033">メール
+                                    <input type="checkbox" id="way-mail" name="entry.528891033" value="メール">メール
                                 </label>
                             </dd>
                             <dt>性別</dt>
                             <dd class="gender">
                                 <label for="male">
-                                    <input type="radio" id="male" name="gender" name="entry.1074675087" checked>男性
+                                    <input type="radio" id="male" value="男性" name="entry.1074675087" checked>男性
                                 </label>
                                 <label for="female">
-                                    <input type="radio" id="female" name="gender" name="entry.1074675087">女性
+                                    <input type="radio" id="female" value="女性" name="entry.1074675087">女性
                                 </label>
                                 <label for="other">
-                                    <input type="radio" id="other" name="gender" name="entry.1074675087">その他
+                                    <input type="radio" id="other" value="その他" name="entry.1074675087">その他
                                 </label>
                             </dd>
                             <dt>年齢</dt>
@@ -431,11 +431,15 @@
                                     <option value="60代" name="entry.1261345954">60代</option>
                                 </select>
                             </dd>
-                            <dt><label for="content">お問い合わせ内容</label></dt>
+                            <dt><label for="content">お問い合わせ内容<span class="required">※</span></label></dt>
                             <dd><textarea name="entry.1740870536" id="content"></textarea></dd>
                         </dl>
                         <input type="submit" class="btn" value="送信">
                     </form>
+                    <script type="text/javascript">
+                        var submitted = false;
+                    </script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted)  {window.location='index.html';}"></iframe>
                 </div>
             </div>
         </section>

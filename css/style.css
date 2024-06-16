@@ -658,6 +658,10 @@ header #mask {
   padding: 10px 20px;
   margin-bottom: 20px;
 }
+#contact .wrapper dl dt .required {
+  color: red;
+  margin-left: 5px;
+}
 #contact .wrapper dl dd {
   width: 70%;
   padding-left: 20px;
