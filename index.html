@@ -391,7 +391,7 @@
                     <h3>ご応募・お問い合わせ</h3>
                 </div>
                 <div class="wrapper">
-                    <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSemCUIAEgy6ejxZQdaVDThINcGUJxIN_zYCKFgnBaI3o0paEw/formResponse">
+                    <form method="post" target="hidden_iframe" onsubmit="submitted=true" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSemCUIAEgy6ejxZQdaVDThINcGUJxIN_zYCKFgnBaI3o0paEw/formResponse">
                         <dl>
                             <dt><label for="name">お名前</label></dt>
                             <dd><input type="text" id="name" name="entry.434616181"></dd>
@@ -435,6 +435,10 @@
                             <dd><textarea name="entry.1740870536" id="content"></textarea></dd>
                         </dl>
                         <input type="submit" class="btn" value="送信">
+                        <script type="text/javascript">
+                            var submitted = false;
+                        </script>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {window.location='index.html';}"></iframe>
                     </form>
                 </div>
             </div>
