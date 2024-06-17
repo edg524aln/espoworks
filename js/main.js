@@ -38,4 +38,37 @@ $(function() {
             $(findElm).slideDown(500);
         }
     });
+
+    $(window).scroll(function() {
+        $('.flow-item').each(function() {
+            var scroll = $(window).scrollTop();
+            var target = $(this).offset().top;
+            var winHeight = $(window).height();
+
+            if (scroll > target - winHeight + 200) {
+                $(this).addClass('flow-fade');
+            }
+        });
+        
+        $('.how-to-text ul li').each(function() {
+            var scroll = $(window).scrollTop();
+            var target = $(this).offset().top;
+            var winHeight = $(window).height();
+
+            if (scroll > target - winHeight + 200) {
+                $(this).addClass('flow-fade2');
+            }
+        });
+
+        $('.voice > .fukidashi').each(function() {
+            var scroll = $(window).scrollTop();
+            var target = $(this).offset().top;
+            var winHeight = $(window).height();
+
+            if (scroll > target - winHeight + 200) {
+                $(this).addClass('popup');
+            }
+        });
+    });
+
 });

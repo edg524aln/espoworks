@@ -295,6 +295,7 @@ header #mask {
   position: relative;
   width: 100%;
   height: 400px;
+  opacity: 0;
 }
 #flow .flow-item .num {
   font-weight: bold;
@@ -417,6 +418,19 @@ header #mask {
   z-index: 20;
 }
 
+.flow-fade {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 #how-to .how-to-text {
   width: 80%;
   text-align: left;
@@ -426,9 +440,10 @@ header #mask {
   position: relative;
   background-color: #fffccc;
   border-radius: 21px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
   padding-left: 50px;
   line-height: 42px;
+  opacity: 0;
 }
 #how-to .how-to-text li span {
   position: absolute;
@@ -443,6 +458,22 @@ header #mask {
   width: 42px;
   height: 42px;
   border-radius: 50%;
+}
+#how-to .how-to-text li::after {
+  content: "";
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  border: 25px solid transparent;
+  border-top: 25px solid #F3E100;
+}
+#how-to .how-to-text li:last-of-type::after {
+  border: none;
+}
+
+.flow-fade2 {
+  animation: fadeIn 0.5s ease-in forwards;
 }
 
 #voice .voice {
@@ -465,6 +496,7 @@ header #mask {
   border-radius: 50px;
   margin: 0 20px;
   position: relative;
+  opacity: 0;
 }
 #voice .voice .fukidashi::after {
   content: "";
@@ -485,6 +517,19 @@ header #mask {
   border-left: 20px solid #fffccc;
 }
 
+.popup {
+  animation: popUp 0.5s ease-in forwards;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 #job-description {
   background-color: rgba(183, 229, 255, 0.1);
   padding: 80px 0;
