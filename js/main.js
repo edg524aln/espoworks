@@ -17,7 +17,7 @@ $(function() {
         let target = $(href == "#" || href == "" ? "html" : href);
         let posi = target.offset().top;
 
-        $("html, body").animate({scrollTop: posi}, 600, "swing");
+        $("html, body").animate({scrollTop: posi}, 800);
         return false;
     });
 
@@ -39,7 +39,15 @@ $(function() {
         }
     });
 
+    $('#to-top').hide();
+
     $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+            $('#to-top').fadeIn(500);
+        } else {
+            $('#to-top').fadeOut(500);
+        }
+
         $('.flow-item').each(function() {
             var scroll = $(window).scrollTop();
             var target = $(this).offset().top;
@@ -69,6 +77,7 @@ $(function() {
                 $(this).addClass('popup');
             }
         });
-    });
 
+        });
+        
 });

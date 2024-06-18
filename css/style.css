@@ -186,7 +186,6 @@ header #mask {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  margin-bottom: 150px;
   padding: 65px 16px 0;
 }
 #mainvisual .container {
@@ -222,6 +221,9 @@ header #mask {
 }
 
 /* キャディってどんなお仕事？ */
+#about-caddy {
+  padding-top: 150px;
+}
 #about-caddy .wrapper {
   display: flex;
   justify-content: space-between;
@@ -817,6 +819,26 @@ footer .copy {
   bottom: 10px;
   left: 0;
   right: 0;
+}
+footer #to-top {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0062AC;
+  border: 2px solid #fff;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 20px;
+}
+footer #to-top::after {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: relative;
+  left: 12px;
+  top: -3px;
 }
 
 @media (max-width: 860px) {
