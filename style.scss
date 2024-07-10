@@ -358,8 +358,6 @@ header {
             top: -60px;
             right: -20px;
         }
-
-
     }
 }
 
@@ -493,7 +491,6 @@ header {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 80%;
     
         .modal-item {
             background-color: #F3E100;
@@ -526,7 +523,7 @@ header {
             width: 100%;
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0.3);
-            z-index: 20;
+            z-index: 25;
         }
     }
 }
