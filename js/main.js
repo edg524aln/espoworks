@@ -75,6 +75,7 @@ $(function() {
 
             if (scroll > target - winHeight + 200) {
                 $(this).addClass('popup');
+                $(this).find('.marker').addClass('on');
             }
         });
 

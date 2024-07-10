@@ -1,0 +1,147 @@
+@media (max-width:860px) {
+    header {
+        nav {
+            display: none;
+        }
+
+        .bars {
+            display: block;
+        }
+    }
+
+    #mainvisual {
+        .container {
+            .main-text {
+                left: 16px;
+            }
+        }
+    }
+
+    #about-caddy {
+        .container {
+            margin-bottom: 0;
+            .wrapper {
+                flex-direction: column-reverse;
+                width: 100%;
+
+                .about-caddy-img {
+                    width: 100%;
+
+                    .fukidashi {
+                        bottom: auto;
+                        left: 100%;
+                        transform: translateX(-100%);
+                        top: -370px;
+                    }
+                }
+
+                .about-caddy-text {
+                    width: 100%;
+                    background-color: #fff;
+                    margin-bottom: 30px;
+                    padding: 0 16px;
+                }
+
+                .about-caddy-text::before {
+                    right: 0;
+                }
+
+                .about-caddy-text::after {
+                    height: 80px;
+                    top: -40px;
+                    right: 16px;
+                }
+            }
+        }
+    }
+
+    #flow {
+        .flows {
+            width: 100%;
+        }
+    }
+
+    #how-to {
+        .how-to-text {
+            width: 100%;
+        }
+    }
+
+    #job-description {
+        .job-info {
+            width: 100%;
+
+            dt {
+                width: 100%;
+                border: none;
+            }
+
+            dd {
+                width: 100%;
+                padding-top: 0;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    #qanda {
+        .qa-items::before {
+            left: 0;
+        }
+
+        .qa-items::after {
+            right: 60px;
+        }
+
+        .qa-items {
+            span:nth-child(1) {
+                width: 36px;
+                height: 36px;
+                top: -70px;
+                left: 0;
+            }
+
+            span:nth-child(2) {
+                width: 24px;
+                height: 24px;
+                top: -50px;
+                left: 18px;
+            }
+
+            span:nth-child(3) {
+                width: 36px;
+                height: 36px;
+                right: 24px;
+                bottom: -46px;
+            }
+
+            span:nth-child(4) {
+                width: 24px;
+                height: 24px;
+                right: 0;
+            }
+        }
+    }
+
+    #contact {
+        .container {
+            margin-bottom: 0;
+        }
+        .wrapper {
+            padding: 30px;
+            dl {
+                flex-direction: column;
+                dt {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+    
+                dd {
+                    width: 100%;
+                    padding-left: 0;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
