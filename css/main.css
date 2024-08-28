@@ -195,8 +195,15 @@ header #mask {
 }
 #mainvisual .container .main-text {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 10%;
+}
+#mainvisual .container .main-text h2 {
+  margin-bottom: 50px;
+  font-size: 48px;
+}
+#mainvisual .container .main-text p span {
+  display: inline-block;
 }
 #mainvisual .container .main-tr {
   display: block;
@@ -772,6 +779,19 @@ header #mask {
   color: #0062AC;
 }
 
+footer .footer-text p {
+  font-size: 14px;
+}
+footer .footer-text p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 20px;
+}
+footer .copy {
+  font-size: 10px;
+}
+
 /*  */
 #about {
   background-color: aliceblue;
@@ -869,6 +889,10 @@ footer #to-top::after {
   }
   #mainvisual .container .main-text {
     left: 16px;
+  }
+  #mainvisual .container .main-text h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
   }
   #about-caddy .container {
     margin-bottom: 0;

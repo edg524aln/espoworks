@@ -226,8 +226,19 @@ header {
         
         .main-text {
             position: absolute;
-            top: 30%;
+            top: 35%;
             left: 10%;
+
+            h2 {
+                margin-bottom: 50px;
+                font-size: 48px;
+            }
+
+            p {
+                span {
+                    display: inline-block;
+                }
+            }
         }
         
         .main-tr {
@@ -948,6 +959,23 @@ header {
             background-color: #fff;
             color: #0062AC;
         }
+    }
+}
+
+footer {
+    .footer-text {
+        p {
+            font-size: 14px;
+        }
+        p:nth-of-type(1) {
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 2px solid #fff;
+            margin-bottom: 20px;
+        }
+    }
+    .copy {
+        font-size: 10px;
     }
 }
 
